@@ -14,7 +14,7 @@ function App() {
 
     // ✅ Validate file type (only images)
     if (!file.type.startsWith("image/")) {
-      alert("Solo se permiten archivos de imagen (JPG, PNG, GIF, etc.)");
+      alert("Solo se permiten archivos de imagen (JPG, JPEG, PNG, GIF, BMP, TIFF, WebP.)");
       e.target.value = ""; // reset the input
       return;
     }
@@ -22,7 +22,7 @@ function App() {
     // Optional secondary validation by extension (for browsers missing MIME)
     const validExtensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp"];
     if (!validExtensions.some((ext) => file.name.toLowerCase().endsWith(ext))) {
-      alert("El archivo debe ser una imagen válida (JPG, PNG, GIF, etc.)");
+      alert("El archivo debe ser una imagen válida (JPG, JPEG, PNG, GIF, BMP, TIFF, WebP)");
       e.target.value = "";
       return;
     }
