@@ -1,1 +1,141 @@
-/node_modules
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Build outputs
+/dist/
+/build/
+/out/
+!.gitkeep
+
+# Production
+.env
+.env.local
+.env.*.local
+.env.production
+.env.production.local
+
+# Logs
+logs/
+*.log
+debug.log*
+/npm-debug.log*
+/yarn-debug.log*
+/pnpm-debug.log*
+
+# Runtime files
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary folders
+tmp/
+temp/
+.cache/
+.cache-loader/
+parcel-cache/
+.vscode-test/
+.svelte-kit/
+
+# OS files
+.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# IntelliJ
+out/
+*.iml
+
+# TypeScript
+*.tsbuildinfo
+
+# React / Frontend
+/public/build/
+/public/static/
+/src/**/*.map
+*.map
+/.next/
+/.next/
+/.next/cache/
+/.expo/
+/.expo-shared/
+
+# Vite
+/dist/
+/node_modules/.vite/
+
+# Storybook
+/storybook-static
+
+# Testing
+/coverage/
+coverage-final.json
+nyc_output/
+
+# Jest
+jest.config.js
+jest.setup.js
+/coverage/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/test-results/
+
+
+# Environment for editors / OS
+.idea/
+*.swp
+*~
+.project
+.classpath
+.settings/
+.history/
+
+# Secrets (example)
+secrets.json
+*.pem
+*.key
+
+# Misc
+*.tgz
+*.bak
+*.orig
+
+# Keep lockfile optional: if you want to track lockfiles, remove the lock lines above.
+
+# Monorepo (optional — uncomment if using pnpm/workspaces/lerna)
+/pnpm-lock.yaml
+/packages/*/node_modules/
+/packages/*/dist/
+/lerna-debug.log
+
+# GitHub Actions caches
+/.github/workflows/_cache/
+
+# If using Next.js, uncomment:
+# .next/
+# .vercel/
+# .vercel_build_output/
+
+# If using Create React App, uncomment:
+# /build/
+
+# If using Expo, uncomment:
+# .expo/
+# .expo-shared/
