@@ -10,11 +10,34 @@ function App() {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file) {
-      setImage(file);
-      setPreview(URL.createObjectURL(file));
-      setTags([]);
+    if (!file) return;
+
+    // ✅ Validate file type (only images)
+    if (!file.type.startsWith("image/")) {
+      alert("Solo se permiten archivos de imagen (JPG, PNG, GIF, etc.)");
+      e.target.value = ""; // reset the input
+      return;
     }
+
+    // Optional secondary validation by extension (for browsers missing MIME)
+    const validExtensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp"];
+    if (!validExtensions.some((ext) => file.name.toLowerCase().endsWith(ext))) {
+      alert("El archivo debe ser una imagen válida (JPG, PNG, GIF, etc.)");
+      e.target.value = "";
+      return;
+    }
+
+    const maxSizeMB = 2;
+    const maxSizeBytes = maxSizeMB * 1024 * 1024;
+    if (file.size > maxSizeBytes) {
+      alert("El archivo no debe superar los" `${maxSizeMB}` + "MB");
+      e.target.value = "";
+      return;
+    }
+
+    setImage(file);
+    setPreview(URL.createObjectURL(file));
+    setTags([]);
   };
 
   const handleAnalyze = async () => {
@@ -46,9 +69,13 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Analizador de Imagenes</h1>
+      <h1>Analizador de Imágenes</h1>
       <div className="upload-section">
-        <input type="file" accept="image/*" onChange={handleFileChange} />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleFileChange}
+        />
       </div>
       <button onClick={handleAnalyze} disabled={!image || loading}>
         {loading ? "Analizando..." : "Analizar"}
@@ -63,12 +90,12 @@ function App() {
         <div className="results">
           <h3>Resultados</h3>
           <ul>
-  {tags.map((tag, i) => (
-    <li key={i}>
-      {tag.label} — {(tag.confidence * 100).toFixed(1)}%
-    </li>
-  ))}
-</ul>
+            {tags.map((tag, i) => (
+              <li key={i}>
+                {tag.label} — {(tag.confidence * 100).toFixed(1)}%
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
