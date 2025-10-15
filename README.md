@@ -17,6 +17,8 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
 
 - [Node.js](https://nodejs.org/) (versión 14 o superior)
 - [npm](https://www.npmjs.com/) (generalmente se instala con Node.js)
+- [docker](https://www.docker.com/products/docker-desktop/) (Versión 25 o superior)
+- [docker-compose](https://docs.docker.com/compose/)(Incluido en la instalación de docker) 
 
 ### Pasos
 
@@ -40,7 +42,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
     El frontend necesita saber la URL del servidor de backend. Abre el archivo `src/apiConfig.js` y asegúrate de que la constante `API_URL` apunte al lugar correcto donde se está ejecutando tu backend.
 
     ```javascript
-    export const API_URL = "http://localhost:5050"; // Ajusta si es necesario
+    export const API_URL = "http://localhost:8090"; // Ajusta si es necesario
     ```
 
 4.  **Ejecuta el proyecto:**
