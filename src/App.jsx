@@ -27,7 +27,7 @@ function App() {
       return;
     }
 
-    const maxSizeMB = 2;
+    const maxSizeMB = 10;
     const maxSizeBytes = maxSizeMB * 1024 * 1024;
     if (file.size > maxSizeBytes) {
       alert("El archivo no debe superar los" `${maxSizeMB}` + "MB");
