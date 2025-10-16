@@ -17,25 +17,19 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
 
 - [Node.js](https://nodejs.org/) (versión 14 o superior)
 - [npm](https://www.npmjs.com/) (generalmente se instala con Node.js)
-- [docker](https://www.docker.com/products/docker-desktop/) (Versión 25 o superior)
-- [docker-compose](https://docs.docker.com/compose/)(Incluido en la instalación de docker) 
 
 ### Pasos
 
 1.  **Clona el repositorio:**
 
-    ```bash
-    git clone https://URL-DEL-REPOSITORIO/nombre-del-repositorio.git
+    git clone https://github.com/Luiskof/Intelligent-Image-Content-Analyzer-Frontend.git
     cd nombre-del-repositorio
-    ```
 
 2.  **Instala las dependencias:**
 
     Ejecuta el siguiente comando en la raíz del proyecto para instalar todas las dependencias necesarias.
 
-    ```bash
     npm install
-    ```
 
 3.  **Configura la URL del Backend:**
 
@@ -49,9 +43,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
 
     Una vez que las dependencias estén instaladas, puedes iniciar el servidor de desarrollo de React.
 
-    ```bash
-    npm start
-    ```
+      npm start
 
     Esto abrirá la aplicación en tu navegador web predeterminado en `http://localhost:3000`.
 
